@@ -1,0 +1,26 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "Weather App using Vanilla JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcrd25/weatherApp.git"
+  },
+  "author": "mcrd25",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mcrd25/weatherApp/issues"
+  },
+  "homepage": "https://github.com/mcrd25/weatherApp#readme",
+  "devDependencies": {
+    "eslint": "^6.2.2"
+  },
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
