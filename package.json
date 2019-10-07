@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/mcrd25/weatherApp#readme",
   "devDependencies": {
-    "eslint": "^6.2.2"
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.2.2",
+    "webpack": "^4.41.0"
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^14.0.0",
