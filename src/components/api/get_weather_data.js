@@ -5,7 +5,7 @@ const weatherFactory = (city) => {
     fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${apiKey}&q=${city}&units=imperial`)
       .then(res => res.json())
       .then(data => data)
-      .catch(err => alert(err));
+      .catch(err => err.json());
   };
 
   return { getData };
