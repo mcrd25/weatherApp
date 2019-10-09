@@ -1,6 +1,10 @@
 import './style/sass/main.scss';
 import 'materialize-css/dist/css/materialize.min.css';
 
-import apiKey from './components/api/api_key';
+import weatherFactory from './components/api/get_weather_data';
 
-console.log(`api key is ${apiKey}`);
+const cityData = weatherFactory('London');
+
+cityData.getData();
+
+// console.log(data);
