@@ -30,6 +30,9 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
+# local eslint config
+.eslintrc.js
+
 # Optional eslint cache
 .eslintcache
 
