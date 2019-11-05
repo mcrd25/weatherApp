@@ -1,6 +1,6 @@
-const weatherFactory = (data) => {
-  console.log(data);
-  // const icon = weather.
-};
+// const weatherFactory = (data) => {
+//   console.log(data);
+//   // const icon = weather.
+// };
 
-export default weatherFactory;
+// export default weatherFactory;

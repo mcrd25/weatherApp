@@ -151,42 +151,7 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/sass/main.scss */ \"./src/style/sass/main.scss\");\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css/dist/css/materialize.min.css */ \"./node_modules/materialize-css/dist/css/materialize.min.css\");\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_api_get_weather_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/api/get_weather_data */ \"./src/components/api/get_weather_data.js\");\n\n\n\nvar cityData = Object(_components_api_get_weather_data__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\ncityData.getData('London');\nconsole.log(data);\n\n//# sourceURL=webpack:///./src/app.js?");
-
-/***/ }),
-
-/***/ "./src/components/api/api_key.js":
-/*!***************************************!*\
-  !*** ./src/components/api/api_key.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = 'c870ac265f65836a9615daceb8575eaf';\n\n//# sourceURL=webpack:///./src/components/api/api_key.js?");
-
-/***/ }),
-
-/***/ "./src/components/api/get_weather_data.js":
-/*!************************************************!*\
-  !*** ./src/components/api/get_weather_data.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api_key */ \"./src/components/api/api_key.js\");\n/* harmony import */ var _api_key__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_api_key__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logic_weather_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logic/weather_app */ \"./src/components/logic/weather_app.js\");\n\n\n\nvar getWeatherFactory = function getWeatherFactory() {\n  var handleData = function handleData(data) {\n    Object(_logic_weather_app__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(data);\n  };\n\n  var handleError = function handleError(err) {\n    console.log(err);\n  };\n\n  var getData = function getData(city) {\n    fetch(\"http://api.openweathermap.org/data/2.5/weather?APPID=\".concat(_api_key__WEBPACK_IMPORTED_MODULE_0___default.a, \"&q=\").concat(city, \"&units=metric\"), {\n      mode: 'cors'\n    }).then(function (res) {\n      return res.json();\n    }).then(function (data) {\n      return handleData(data);\n    })[\"catch\"](function (err) {\n      return handleError(err);\n    });\n  };\n\n  return {\n    getData: getData\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getWeatherFactory);\n\n//# sourceURL=webpack:///./src/components/api/get_weather_data.js?");
-
-/***/ }),
-
-/***/ "./src/components/logic/weather_app.js":
-/*!*********************************************!*\
-  !*** ./src/components/logic/weather_app.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar weatherFactory = function weatherFactory(data) {\n  console.log(data); // const icon = weather.\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (weatherFactory);\n\n//# sourceURL=webpack:///./src/components/logic/weather_app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/sass/main.scss */ \"./src/style/sass/main.scss\");\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css/dist/css/materialize.min.css */ \"./node_modules/materialize-css/dist/css/materialize.min.css\");\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__);\n\n // import getWeatherFactory from './components/api/get_weather_data';\n// const cityData = getWeatherFactory();\n// cityData.getData('London');\n// console.log(data);\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ }),
 
