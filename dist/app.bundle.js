@@ -151,7 +151,42 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/sass/main.scss */ \"./src/style/sass/main.scss\");\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css/dist/css/materialize.min.css */ \"./node_modules/materialize-css/dist/css/materialize.min.css\");\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__);\n\n // import getWeatherFactory from './components/api/get_weather_data';\n// const cityData = getWeatherFactory();\n// cityData.getData('London');\n// console.log(data);\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/sass/main.scss */ \"./src/style/sass/main.scss\");\n/* harmony import */ var _style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! materialize-css/dist/css/materialize.min.css */ \"./node_modules/materialize-css/dist/css/materialize.min.css\");\n/* harmony import */ var materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(materialize_css_dist_css_materialize_min_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_api_get_weather_data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/api/get_weather_data */ \"./src/components/api/get_weather_data.js\");\n\n\n\nvar cityData = Object(_components_api_get_weather_data__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\ncityData.getData('London');\nconsole.log(data);\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/components/api/api_key.js":
+/*!***************************************!*\
+  !*** ./src/components/api/api_key.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = 'c870ac265f65836a9615daceb8575eaf';\n\n//# sourceURL=webpack:///./src/components/api/api_key.js?");
+
+/***/ }),
+
+/***/ "./src/components/api/get_weather_data.js":
+/*!************************************************!*\
+  !*** ./src/components/api/get_weather_data.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _api_key__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api_key */ \"./src/components/api/api_key.js\");\n/* harmony import */ var _api_key__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_api_key__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _logic_weather_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../logic/weather_app */ \"./src/components/logic/weather_app.js\");\n\n\n\nvar getWeatherFactory = function getWeatherFactory() {\n  var handleData = function handleData(data) {\n    Object(_logic_weather_app__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(data);\n  };\n\n  var handleError = function handleError(err) {\n    console.log(err);\n  };\n\n  var getData = function getData(city) {\n    fetch(\"http://api.openweathermap.org/data/2.5/weather?APPID=\".concat(_api_key__WEBPACK_IMPORTED_MODULE_0___default.a, \"&q=\").concat(city, \"&units=metric\"), {\n      mode: 'cors'\n    }).then(function (res) {\n      return res.json();\n    }).then(function (data) {\n      return handleData(data);\n    })[\"catch\"](function (err) {\n      return handleError(err);\n    });\n  };\n\n  return {\n    getData: getData\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (getWeatherFactory);\n\n//# sourceURL=webpack:///./src/components/api/get_weather_data.js?");
+
+/***/ }),
+
+/***/ "./src/components/logic/weather_app.js":
+/*!*********************************************!*\
+  !*** ./src/components/logic/weather_app.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nvar weatherFactory = function weatherFactory(_ref) {\n  var cod = _ref.cod,\n      dt = _ref.dt,\n      weather = _ref.weather,\n      name = _ref.name,\n      sys = _ref.sys,\n      main = _ref.main,\n      wind = _ref.wind,\n      visibility = _ref.visibility;\n\n  if (cod === 200) {\n    var _currentTemp = main.currentTemp,\n        _pressure = main.pressure,\n        _humidity = main.humidity,\n        _min_temp = main.min_temp,\n        _max_temp = main.max_temp;\n\n    var _location = \"\".concat(name, \", \").concat(sys.country);\n\n    var sunriseTime = new Date(sys.sunrise * 1000);\n    var sunsetTime = new Date(sys.sunset * 1000);\n\n    var _date = new Date(dt * 1000);\n\n    var _theme = weather.main;\n    var _description = weather.description;\n    var _weatherIcon = weather.icon;\n\n    var _windInfo = \"speed: \".concat(wind.speed, \" m/s  direction: \").concat(wind.deg);\n  }\n\n  return _defineProperty({\n    location: location,\n    currentTemp: currentTemp,\n    pressure: pressure,\n    humidity: humidity,\n    max_temp: max_temp,\n    min_temp: min_temp,\n    visibility: visibility,\n    date: date,\n    windInfo: windInfo,\n    theme: theme,\n    description: description,\n    weatherIcon: weatherIcon\n  }, \"windInfo\", windInfo);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (weatherFactory);\n\n//# sourceURL=webpack:///./src/components/logic/weather_app.js?");
 
 /***/ }),
 
