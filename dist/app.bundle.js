@@ -104,7 +104,7 @@ eval("exports = module.exports = __webpack_require__(/*! ../../../css-loader/dis
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: #e0f7fa; }\\n\\nnav {\\n  width: 100%; }\\n\\n.card {\\n  width: 50%;\\n  margin: auto !important;\\n  margin-top: 1rem !important; }\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/style/sass/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: #e0f7fa; }\\n\\nnav {\\n  width: 100%; }\\n\\n.card {\\n  width: 50%;\\n  margin: auto !important;\\n  margin-top: 1rem !important; }\\n\\n.img-overlay {\\n  position: absolute;\\n  top: 0;\\n  left: 0;\\n  width: 100%;\\n  height: 100%;\\n  display: none;\\n  color: #FFF;\\n  background: #00acc1;\\n  display: block;\\n  opacity: .8; }\\n\\n.date {\\n  font-size: .7em; }\\n\\n.cel, .far {\\n  color: #fff;\\n  padding: .2em; }\\n\\n.temp {\\n  font-size: 2em; }\\n\\n.temp .icon {\\n  position: relative;\\n  float: left; }\\n\\n.type .active {\\n  color: #263238; }\\n\\n.wicon {\\n  height: 80px; }\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/style/sass/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
