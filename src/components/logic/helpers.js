@@ -5,8 +5,7 @@ export const getMonth = (date) => {
 } 
 
 export const convertDateTime = (dateInUTC) => {
-	new Date(dateInUTC * 1000);
-	return date;
+	return new Date(dateInUTC * 1000);
 }
 
 export const dayOfWeek = (date) => {
