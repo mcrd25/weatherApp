@@ -1,10 +1,13 @@
+import {
+  convertDateTime
+} from "./helpers";
 const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility}) => {
   if (cod === 200) {
     const { currentTemp, pressure, humidity, min_temp, max_temp } = main;
     const location = `${name}, ${sys.country}`;
-    const sunriseTime = new Date(sys.sunrise * 1000);
-    const sunsetTime = new Date(sys.sunset * 1000);
-    // const date = 
+    const sunriseTime = convertDateTime(sys.sunrise);
+    const sunsetTime = convertDateTime(sys.sunset);
+    const date = convertDateTime(dt);
     const theme = weather.main;
     const description = weather.description;
     const weatherIcon = weather.icon;

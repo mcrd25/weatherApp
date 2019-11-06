@@ -5,6 +5,7 @@ import getWeatherFactory from './components/api/get_weather_data';
 
 const cityData = getWeatherFactory();
 
+
 cityData.getData('London');
 
-console.log(data);
+// console.log(data);

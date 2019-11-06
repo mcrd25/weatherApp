@@ -3,7 +3,7 @@ import weatherFactory from '../logic/weather_app';
 
 const getWeatherFactory = () => {
   const handleData = (data) => {
-    weatherFactory(data);
+    console.log(weatherFactory(data));
   };
 
   const handleError = (err) => {
