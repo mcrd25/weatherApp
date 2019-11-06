@@ -1,14 +1,17 @@
 import {
-  convertDateTime
+  convertDateTime, dateTimeString, getTimeString
 } from "./helpers";
 const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility}) => {
   if (cod === 200) {
     const { temp, pressure, humidity, temp_min, temp_max } = main;
     // const temp = main.
     const location = `${name}, ${sys.country}`;
-    const sunriseTime = convertDateTime(sys.sunrise);
-    const sunsetTime = convertDateTime(sys.sunset);
-    const date = convertDateTime(dt);
+    const sunriseTimeJS = convertDateTime(sys.sunrise);
+    const sunsetTimeJS = convertDateTime(sys.sunset);
+    const sunrise = getTimeString(sunriseTimeJS);
+    const sunset = getTimeString(sunsetTimeJS);
+    const jsDate = convertDateTime(dt);
+    const date = dateTimeString(jsDate);
     const theme = weather[0].main;
     const description = weather[0].description;
     const weatherIcon = weather[0].icon;
@@ -23,6 +26,8 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility}) 
       temp_min,
       visibility,
       date,
+      sunrise,
+      sunset,
       windInfo,
       theme,
       description,
