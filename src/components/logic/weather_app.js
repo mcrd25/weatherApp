@@ -1,7 +1,7 @@
 import {
   convertDateTime, dateTimeString, getTimeString
 } from "./helpers";
-const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility}) => {
+const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility, timezone}) => {
   if (cod === 200) {
     const { temp, pressure, humidity, temp_min, temp_max } = main;
     // const temp = main.
@@ -25,7 +25,7 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility}) 
       temp_max,
       temp_min,
       visibility,
-      date,
+      jsDate,
       sunrise,
       sunset,
       windInfo,
