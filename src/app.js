@@ -6,6 +6,6 @@ import getWeatherFactory from './components/api/get_weather_data';
 const cityData = getWeatherFactory();
 
 
-cityData.getData('London');
+cityData.getData('Colombia');
 
 // console.log(data);

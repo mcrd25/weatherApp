@@ -4,7 +4,7 @@ const getMonth = (date) => {
 	});
 } 
 
-export const convertDateTime = (dateInUTC) => {
+export const convertDateTime = (dateInUTC, timezone) => {
 	return new Date(dateInUTC * 1000);
 }
 
