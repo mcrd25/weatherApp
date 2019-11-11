@@ -17,15 +17,19 @@ const dayOfWeek = (date) => {
 	return days[date.getDay()];
 }
 
+const formattedMinute = (minutes) => {
+	return minutes < 10 ? `0${minutes}` : minutes;
+}
+
 export const getTimeString = (date) => {
 	const hour = date.getHours();
 	if (hour === 0) {
-		return `12:${date.getMinutes()}AM`;
+		return `12:${formattedMinute(date.getMinutes())}AM`;
 	}
 	else if (hour < 12) {
-		return `${hour}:${date.getMinutes()}AM`;
+		return `${hour}:${formattedMinute(date.getMinutes())}AM`;
 	} else {
-		return `${hour - 12 }:${date.getMinutes()}PM`;
+		return `${(hour - 12) === 0 ? 12 : hour - 12 }:${formattedMinute(date.getMinutes())}PM`;
 	}
 }
 
