@@ -11,12 +11,14 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility, t
     const sunrise = getTimeString(sunriseTimeJS);
     const sunset = getTimeString(sunsetTimeJS);
     const jsDate = convertDateTime(dt, timezone);
+    const offset = jsDate.getTimezoneOffset();
     const date = dateTimeString(jsDate);
     const theme = weather[0].main;
     const description = weather[0].description;
     const weatherIcon = weather[0].icon;
     const windInfo = `speed: ${wind.speed} m/s  direction: ${wind.deg}`;
     
+
     return {
       location,
       temp,
@@ -32,7 +34,9 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility, t
       theme,
       description,
       weatherIcon,
-      windInfo
+      windInfo,
+      offset,
+      timezone
     };
   }
   

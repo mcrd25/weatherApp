@@ -5,7 +5,11 @@ const getMonth = (date) => {
 } 
 
 export const convertDateTime = (dateInUTC, timezone) => {
-	return new Date(dateInUTC * 1000);
+	const jsTimeStamp = dateInUTC * 1000;
+	const date = new Date(jsTimeStamp);
+	const osOffset = date.getTimezoneOffset();
+	const cityTimeStamp = jsTimeStamp - ((timezone - osOffset / 60)*60 * 60 * 1000);
+	return new Date(cityTimeStamp);;
 }
 
 const dayOfWeek = (date) => {
