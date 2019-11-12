@@ -6,8 +6,10 @@ const weatherFactory = ({
   cod, dt, weather, name, sys, main, wind, visibility, timezone,
 }) => {
   if (cod === 200) {
-    const { temp, pressure, humidity, temp_min, temp_max } = main;
-    // const temp = main.
+    const {
+      // eslint-disable-next-line camelcase
+      temp, pressure, humidity, temp_min, temp_max,
+    } = main;
     const location = `${name}, ${sys.country}`;
     const sunriseTimeJS = convertDateTime(sys.sunrise, timezone);
     const sunsetTimeJS = convertDateTime(sys.sunset, timezone);
@@ -37,12 +39,10 @@ const weatherFactory = ({
       description,
       weatherIcon,
     };
-  } else {
-    return {
-      error: 'Unable to fulfill request!'
-    };
   }
-  
+  return {
+    error: 'Unable to fulfill request!',
+  };
 };
 
 export default weatherFactory;
