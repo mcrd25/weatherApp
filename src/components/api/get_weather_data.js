@@ -31,9 +31,9 @@ const getWeatherFactory = () => {
     fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${apiKey}&q=${city}&units=metric`, {
       mode: 'cors',
     })
-      .then((res) => res.json())
-      .then((data) => handleData(data))
-      .catch((err) => handleError(err));
+      .then(res => res.json())
+      .then(data => handleData(data))
+      .catch(err => handleError(err));
   };
 
   return { getData };

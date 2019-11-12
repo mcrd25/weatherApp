@@ -1,4 +1,4 @@
-const getMonth = (date) => date.toLocaleString('default', {
+const getMonth = date => date.toLocaleString('default', {
   month: 'long',
 });
 
@@ -15,7 +15,7 @@ const dayOfWeek = (date) => {
   return days[date.getDay()];
 };
 
-const formattedMinute = (minutes) => (minutes < 10 ? `0${minutes}` : minutes);
+const formattedMinute = minutes => (minutes < 10 ? `0${minutes}` : minutes);
 
 export const getTimeString = (date) => {
   const hour = date.getHours();
@@ -28,8 +28,8 @@ export const getTimeString = (date) => {
   return `${(hour - 12) === 0 ? 12 : hour - 12}:${formattedMinute(date.getMinutes())}PM`;
 };
 
-export const dateTimeString = (date) => `${dayOfWeek(date)}, ${getMonth(date)} ${date.getDate()} ${getTimeString(date)}`;
+export const dateTimeString = date => `${dayOfWeek(date)}, ${getMonth(date)} ${date.getDate()} ${getTimeString(date)}`;
 
-export const convertCelToFar = (temp) => ((temp * (9 / 5)) + 32).toFixed(2);
+export const convertCelToFar = temp => ((temp * (9 / 5)) + 32).toFixed(2);
 
-export const convertFarToCel = (temp) => ((temp - 32) * (5 / 9)).toFixed(2);
+export const convertFarToCel = temp => ((temp - 32) * (5 / 9)).toFixed(2);
