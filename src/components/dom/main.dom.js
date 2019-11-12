@@ -14,14 +14,21 @@ const uiFactory = () => {
     dateTime.innerHTML = date;
   };
   
-  // const updateIcon = (icon) => {
-  //   const icon = document.query
-  // };
+  const updateIcon = (iconId) => {
+    const icon = document.querySelector('.wicon');
+    icon.src = `http://openweathermap.org/img/w/${iconId}.png`;
+  };
+
+  const updateTemp = (value) => {
+    const temp = document.querySelector('.value');
+    temp.innerHTML = value;
+  }
 
   return {
     updateLocation,
     changeImage,
     updateDateTime,
+    updateIcon,
   };
 };
 
