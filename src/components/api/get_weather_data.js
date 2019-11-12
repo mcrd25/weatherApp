@@ -5,7 +5,6 @@ import uiFactory from '../dom/main.dom';
 const getWeatherFactory = () => {
   const handleData = (data) => {
     const ui = uiFactory();
-    console.log(weatherFactory(data));
     const weatherData = weatherFactory(data);
     ui.updateLocation(weatherData.location);
     ui.changeImage(weatherData.theme);

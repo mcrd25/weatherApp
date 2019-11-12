@@ -13,7 +13,7 @@ const uiFactory = () => {
     const dateTime = document.querySelector('.date');
     dateTime.innerHTML = date;
   };
-  
+
   const updateIcon = (iconId) => {
     const icon = document.querySelector('.wicon');
     icon.src = `http://openweathermap.org/img/w/${iconId}.png`;
@@ -61,7 +61,7 @@ const uiFactory = () => {
 
   const updateVisibility = (value) => {
     const vis = document.querySelector('.vis');
-    vis.innerHTML = `Visibility: ${value}`;
+    vis.innerHTML = `Visibility: ${value} m`;
   };
 
   const updatePressure = (value) => {

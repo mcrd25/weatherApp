@@ -1,5 +1,5 @@
 import {
-  convertDateTime, dateTimeString, getTimeString
+  convertDateTime, dateTimeString, getTimeString,
 } from './helpers';
 
 const weatherFactory = ({
@@ -20,8 +20,7 @@ const weatherFactory = ({
     const theme = weather[0].main;
     const { description } = weather[0];
     const weatherIcon = weather[0].icon;
-    const windInfo = `speed: ${wind.speed} m/s  direction: ${wind.deg}`;
-    
+    const windInfo = `speed: ${wind.speed} m/s  direction: ${wind.deg}&deg;`;
 
     return {
       location,
