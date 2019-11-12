@@ -23,7 +23,8 @@ const getWeatherFactory = () => {
   };
 
   const handleError = (err) => {
-    console.log(err);
+    const error = document.querySelector('.des');
+    error.innerHTML = err;
   };
 
   const getData = (city) => {
