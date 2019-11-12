@@ -28,9 +28,7 @@ export const getTimeString = (date) => {
   return `${(hour - 12) === 0 ? 12 : hour - 12}:${formattedMinute(date.getMinutes())}PM`;
 };
 
-export const dateTimeString = (date) => {
-  return `${dayOfWeek(date)}, ${getMonth(date)} ${date.getDate()} ${getTimeString(date)}`;
-};
+export const dateTimeString = (date) => `${dayOfWeek(date)}, ${getMonth(date)} ${date.getDate()} ${getTimeString(date)}`;
 
 export const convertCelToFar = (temp) => ((temp * (9 / 5)) + 32).toFixed(2);
 
