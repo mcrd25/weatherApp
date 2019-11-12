@@ -12,6 +12,15 @@ const getWeatherFactory = () => {
     ui.updateDateTime(weatherData.date);
     ui.updateIcon(weatherData.weatherIcon);
     ui.updateTemp(weatherData.temp);
+    ui.updateDescription(weatherData.description);
+    ui.updateHumidity(weatherData.humidity);
+    ui.updateMax(weatherData.temp_max);
+    ui.updateMin(weatherData.temp_min);
+    ui.updateSunrise(weatherData.sunrise);
+    ui.updateSunset(weatherData.sunset);
+    ui.updateVisibility(weatherData.visibility);
+    ui.updatePressure(weatherData.pressure);
+    ui.updateWind(weatherData.windInfo);
   };
 
   const handleError = (err) => {
