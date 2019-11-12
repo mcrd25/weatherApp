@@ -1,9 +1,15 @@
 import apiKey from './api_key';
 import weatherFactory from '../logic/weather_app';
+import uiFactory from '../dom/main.dom';
 
 const getWeatherFactory = () => {
   const handleData = (data) => {
+    const ui = uiFactory();
     console.log(weatherFactory(data));
+    const weatherData = weatherFactory(data);
+    ui.updateLocation(weatherData.location);
+    ui.changeImage(weatherData.theme);
+    ui.updateDateTime(weatherData.date);
   };
 
   const handleError = (err) => {

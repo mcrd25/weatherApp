@@ -11,10 +11,9 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility, t
     const sunrise = getTimeString(sunriseTimeJS);
     const sunset = getTimeString(sunsetTimeJS);
     const jsDate = convertDateTime(dt, timezone);
-    const offset = jsDate.getTimezoneOffset();
     const date = dateTimeString(jsDate);
     const theme = weather[0].main;
-    const description = weather[0].description;
+    const { description } = weather[0];
     const weatherIcon = weather[0].icon;
     const windInfo = `speed: ${wind.speed} m/s  direction: ${wind.deg}`;
     
@@ -27,16 +26,18 @@ const weatherFactory = ({ cod, dt, weather, name, sys, main, wind, visibility, t
       temp_max,
       temp_min,
       visibility,
-      jsDate,
+      date,
       sunrise,
       sunset,
       windInfo,
       theme,
       description,
       weatherIcon,
-      windInfo,
-      offset,
-      timezone
+      windInfo
+    };
+  } else {
+    return {
+      error: 'Unable to fulfill request!'
     };
   }
   
