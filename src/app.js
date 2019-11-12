@@ -15,7 +15,6 @@ const celsius = document.querySelector('.cel');
 
 document.addEventListener('click', (event) => {
   const value = document.querySelector('.value').innerHTML;
-  //console.log(value);
   const node = event.target;
   if (node.matches('.cel')) {
     if (!node.matches('.active')) {
@@ -29,5 +28,3 @@ document.addEventListener('click', (event) => {
     }
   }
 }, false);
-
-// console.log(data);
