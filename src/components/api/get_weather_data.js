@@ -11,6 +11,7 @@ const getWeatherFactory = () => {
     ui.changeImage(weatherData.theme);
     ui.updateDateTime(weatherData.date);
     ui.updateIcon(weatherData.weatherIcon);
+    ui.updateTemp(weatherData.temp);
   };
 
   const handleError = (err) => {

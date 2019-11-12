@@ -22,13 +22,14 @@ const uiFactory = () => {
   const updateTemp = (value) => {
     const temp = document.querySelector('.value');
     temp.innerHTML = value;
-  }
+  };
 
   return {
     updateLocation,
     changeImage,
     updateDateTime,
     updateIcon,
+    updateTemp,
   };
 };
 
