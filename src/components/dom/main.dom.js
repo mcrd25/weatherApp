@@ -24,12 +24,18 @@ const uiFactory = () => {
     temp.innerHTML = value;
   };
 
+  const activeTempToggle = (first, second) => {
+    second.classList.remove('active');
+    first.classList.add('active');
+  };
+
   return {
     updateLocation,
     changeImage,
     updateDateTime,
     updateIcon,
     updateTemp,
+    activeTempToggle,
   };
 };
 
