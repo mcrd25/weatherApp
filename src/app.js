@@ -13,6 +13,7 @@ cityData.getData('London');
 const faren = document.querySelector('.far');
 const celsius = document.querySelector('.cel');
 const search = document.querySelector('.white-block');
+
 document.addEventListener('click', (event) => {
   const value = document.querySelector('.value').innerHTML;
   const node = event.target;
