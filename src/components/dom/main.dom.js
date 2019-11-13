@@ -16,7 +16,7 @@ const uiFactory = () => {
 
   const updateIcon = (iconId) => {
     const icon = document.querySelector('.wicon');
-    icon.src = `http://openweathermap.org/img/w/${iconId}.png`;
+    icon.src = `https://openweathermap.org/img/w/${iconId}.png`;
   };
 
   const updateTemp = (value) => {

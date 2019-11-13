@@ -28,7 +28,7 @@ const getWeatherFactory = () => {
   };
 
   const getData = (city) => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?APPID=${apiKey}&q=${city}&units=metric`, {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?APPID=${apiKey}&q=${city}&units=metric`, {
       mode: 'cors',
     })
       .then(res => res.json())
