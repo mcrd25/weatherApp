@@ -12,7 +12,7 @@ const ui = uiFactory();
 cityData.getData('London');
 const faren = document.querySelector('.far');
 const celsius = document.querySelector('.cel');
-
+const search = document.querySelector('.white-block');
 document.addEventListener('click', (event) => {
   const value = document.querySelector('.value').innerHTML;
   const node = event.target;
@@ -28,7 +28,10 @@ document.addEventListener('click', (event) => {
     }
   } else if (node.matches('#go_btn')) {
     const city = document.querySelector('#city').value;
-    console.log(city);
     cityData.getData(city);
+  } else if (node.matches('#search_icon') || node.matches('#search')) {
+    const icon = document.querySelector('#search_icon');
+    icon.innerHTML = icon.innerHTML === 'search' ? 'close' : 'search';
+    search.style.display = search.style.display === 'block' ? 'none' : 'block';
   }
 }, false);
