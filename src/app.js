@@ -26,7 +26,7 @@ document.addEventListener('click', (event) => {
       ui.updateTemp(convertCelToFar(value));
       ui.activeTempToggle(node, celsius);
     }
-  } else if (node.matches('.go')) {
+  } else if (node.matches('#go_btn')) {
     const city = document.querySelector('#city').value;
     console.log(city);
     cityData.getData(city);
