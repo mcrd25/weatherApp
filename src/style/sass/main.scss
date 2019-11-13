@@ -50,3 +50,19 @@ nav {
 .wicon {
   height: 80px;
 }
+
+.card-content {
+  padding-top: 0;
+  margin-top: 0;
+  position: relative;
+}
+.white-block {
+  position: absolute;
+  background: #fff;
+  top: -20px;
+  width: 80%;
+}
+
+.go {
+  height: 100%;
+}

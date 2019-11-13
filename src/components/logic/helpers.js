@@ -6,7 +6,7 @@ export const convertDateTime = (dateInUTC, timezone) => {
   const jsTimeStamp = dateInUTC * 1000;
   const date = new Date(jsTimeStamp);
   const osOffset = date.getTimezoneOffset();
-  const cityTimeStamp = jsTimeStamp - ((timezone - osOffset / 60) * 60 * 60 * 1000);
+  const cityTimeStamp = jsTimeStamp - ((timezone - (osOffset * 60)) * 1000);
   return new Date(cityTimeStamp);
 };
 

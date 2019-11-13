@@ -1,7 +1,7 @@
 const uiFactory = () => {
   const updateLocation = (locationText) => {
-    const location = document.querySelector('.location');
-    location.append(` ${locationText}`);
+    const location = document.querySelector('.loc-info');
+    location.innerHTML = ` ${locationText}`;
   };
 
   const changeImage = (theme) => {

@@ -6,6 +6,7 @@ const weatherFactory = ({
   cod, dt, weather, name, sys, main, wind, visibility, timezone,
 }) => {
   if (cod === 200) {
+    console.log(timezone);
     const {
       // eslint-disable-next-line camelcase
       temp, pressure, humidity, temp_min, temp_max,

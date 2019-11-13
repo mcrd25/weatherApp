@@ -26,5 +26,9 @@ document.addEventListener('click', (event) => {
       ui.updateTemp(convertCelToFar(value));
       ui.activeTempToggle(node, celsius);
     }
+  } else if (node.matches('.go')) {
+    const city = document.querySelector('#city').value;
+    console.log(city);
+    cityData.getData(city);
   }
 }, false);
