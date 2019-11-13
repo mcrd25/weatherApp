@@ -16,7 +16,7 @@ Before doing anything you must first run following command to install all npm pa
 `npm install`
 
 ## Deployment Page
-Dev version of page is deployed here: 
+Dev version of page is deployed here: https://raw.githack.com/mcrd25/weatherApp/weather-app/dist/index.html
 Production version of page is deployed here: 
 
 ## Contributors
