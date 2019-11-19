@@ -4,6 +4,10 @@
   "description": "Weather App using Vanilla JavaScript",
   "main": "app.js",
   "scripts": {
+    "build": "webpack -p",
+    "dev": "webpack --mode development",
+    "watch": "webpack --progress --watch --mode development",
+    "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +21,21 @@
   },
   "homepage": "https://github.com/mcrd25/weatherApp#readme",
   "devDependencies": {
-    "eslint": "^6.2.2"
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "materialize-css": "^1.0.0"
   }
 }

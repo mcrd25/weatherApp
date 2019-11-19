@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Maya's Weather App</title>
+</head>
+<body>
+
+	<div class="container">
+		
+    <nav class="teal">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Maya's Weather App</a>
+      </div>
+		</nav>
+		<div class="row main-card">
+			<div class="col s12">
+				<div class="card">
+					<div class="card-image">
+						<img class="card-img" src="https://source.unsplash.com/1600x900/?sunny+weather">
+						<div class="img-overlay">
+
+						</div>
+						<span class="card-title">
+							<span class="location main-info"><i class="material-icons">room</i> <span class="loc-info"></span></span><br>
+							<span class="date main-info">Date and time</span><br>
+							<span class="temp main-info">
+								<span class="icon"><img src="https://openweathermap.org/img/w/10d.png" alt="weather" class="wicon"></span>
+								<span class="value">0</span>
+								<span class="type">
+									<a href="#" class="cel active">&#8451;</a>|<a href="#" class="far">&#8457;</a>
+								</span>
+							</span>
+						</span>
+						<a id="search" class="btn-floating halfway-fab waves-effect waves-light"><i id="search_icon" class="material-icons">search</i></a>
+					</div>
+				
+					<div class="card-content center">
+						<div class="white-block row">
+							
+							<input  id="city" placeholder="Search by city" type="text" class="col s9">
+							<div id="go_btn" class="btn col s3">
+								Go
+								
+							</div>
+					</div>
+					
+						
+					
+						<div class="weather-info">
+							<h5 class="des">
+								Description
+							</h5>
+						</div>
+						<div class="weather-info hum">
+							Humidity: 
+						</div>
+						<div class="weather-info max">
+							Max Temperature: 
+						</div>
+						<div class="weather-info min">
+							Min Temperature: 
+						</div>
+						<div class="weather-info sunrise">
+							Sunrise: 
+						</div>
+						<div class="weather-info sunset">
+							Sunset: 
+						</div>
+						<div class="weather-info vis">
+							Visibility: 
+						</div>
+						<div class="weather-info pressure">
+							Pressure: 
+						</div>
+						<div class="weather-info wind">
+							Wind:
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<script type="module" src="app.bundle.js"></script>
+</body>
+</html>
